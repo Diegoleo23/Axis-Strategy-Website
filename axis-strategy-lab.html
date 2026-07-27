@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Axis Strategy Lab — Coming Soon</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Axis Strategy Lab is currently being developed — a future advisory venture turning the ideas from The Strategy Lens into practice.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500;1,6..72,600&family=Libre+Franklin:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  ::selection { background: #1a3a5c; color: #f5f1e7; }
+  a { text-decoration: none; color: inherit; }
+  body { background: #f5f1e7; color: #1c1b17; font-family: 'Libre Franklin', system-ui, sans-serif; min-height: 100vh; -webkit-font-smoothing: antialiased; }
+
+  .lens-nav-link { position: relative; }
+  .lens-nav-link::after { content: ""; position: absolute; left: 0; right: 100%; bottom: -4px; height: 1px; background: #1a3a5c; transition: right .28s ease; }
+  .lens-nav-link:hover::after { right: 0; }
+  .lens-cta-primary:hover { background: #285484; }
+  .lab-back:hover { color: #f5f1e7; }
+  .lab-back:hover .lab-back-arrow { transform: translateX(-3px); }
+
+  @keyframes labPulse {
+    0%, 100% { opacity: 0.35; }
+    50% { opacity: 1; }
+  }
+  .lab-pulse { animation: labPulse 2.6s ease-in-out infinite; transform-origin: center; }
+</style>
+</head>
+<body>
+
+  <header style="position: sticky; top: 0; z-index: 50; background: rgba(245,241,231,0.86); backdrop-filter: saturate(140%) blur(10px); border-bottom: 1px solid #ddd5c3;">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 0 32px; height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+      <a href="index.html" style="font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 21px; letter-spacing: -0.01em; white-space: nowrap;">The Strategy Lens</a>
+      <nav style="display: flex; align-items: center; gap: 30px;">
+        <a class="lens-nav-link" href="index.html" style="font-size: 13px; font-weight: 500;">Home</a>
+        <a class="lens-nav-link" href="topics.html" style="font-size: 13px; font-weight: 500;">Topics</a>
+        <a class="lens-nav-link" href="about.html" style="font-size: 13px; font-weight: 500;">About</a>
+      </nav>
+      <a class="lens-cta-primary" href="index.html#newsletter" style="background: #1a3a5c; color: #f5f1e7; font-size: 12px; font-weight: 600; letter-spacing: 0.04em; padding: 9px 16px; border-radius: 2px; transition: background .2s ease;">Subscribe</a>
+    </div>
+  </header>
+
+  <!-- ============ LAB HERO ============ -->
+  <section style="background: #1c1b17; color: #ece5d4;">
+    <div style="max-width: 860px; margin: 0 auto; padding: 72px 32px 88px; text-align: center;">
+
+      <a class="lab-back" href="about.html" style="display: inline-flex; align-items: center; gap: 7px; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #8a8472; transition: color .2s ease;"><span class="lab-back-arrow" style="display: inline-block; transition: transform .2s ease;">←</span> The Strategy Lens</a>
+
+      <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.24em; text-transform: uppercase; color: #9fb4c9; margin-top: 30px;">A Companion Venture</div>
+      <h1 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(40px, 6.4vw, 68px); line-height: 1.04; letter-spacing: -0.02em; margin: 22px 0 0; color: #f5f1e7;">Axis Strategy Lab</h1>
+      <p style="font-family: 'Newsreader', serif; font-style: italic; font-size: clamp(19px, 2.2vw, 24px); line-height: 1.5; color: #c5bfb0; max-width: 480px; margin: 20px auto 0;">Currently being developed. Please check back soon.</p>
+
+      <!-- AXIS / TRAJECTORY GRAPHIC -->
+      <div style="margin: 56px auto 0; max-width: 560px; aspect-ratio: 16/10; border: 1px solid #36342c; background: #21201c; border-radius: 2px; padding: 20px;">
+        <svg viewBox="0 0 520 320" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A diagram of coordinate axes with a stepped trajectory line moving upward through several plotted points, the final point still open — representing strategy, experimentation, and work in progress.">
+          <!-- grid -->
+          <g stroke="#302e26" stroke-width="1">
+            <line x1="60" y1="20" x2="60" y2="270" stroke-dasharray="2 7" />
+            <line x1="140" y1="20" x2="140" y2="270" stroke-dasharray="2 7" />
+            <line x1="220" y1="20" x2="220" y2="270" stroke-dasharray="2 7" />
+            <line x1="300" y1="20" x2="300" y2="270" stroke-dasharray="2 7" />
+            <line x1="380" y1="20" x2="380" y2="270" stroke-dasharray="2 7" />
+            <line x1="460" y1="20" x2="460" y2="270" stroke-dasharray="2 7" />
+            <line x1="40" y1="230" x2="480" y2="230" stroke-dasharray="2 7" />
+            <line x1="40" y1="170" x2="480" y2="170" stroke-dasharray="2 7" />
+            <line x1="40" y1="110" x2="480" y2="110" stroke-dasharray="2 7" />
+            <line x1="40" y1="50" x2="480" y2="50" stroke-dasharray="2 7" />
+          </g>
+
+          <!-- axes -->
+          <g stroke="#5b5748" stroke-width="1.5" fill="none">
+            <line x1="60" y1="20" x2="60" y2="270" />
+            <line x1="60" y1="270" x2="480" y2="270" />
+            <path d="M 55 28 L 60 18 L 65 28" />
+            <path d="M 472 265 L 482 270 L 472 275" />
+          </g>
+
+          <!-- strategy / trajectory path -->
+          <polyline points="60,240 120,225 160,245 210,190 260,205 320,140 370,155 420,95" fill="none" stroke="#9fb4c9" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" />
+          <polyline points="420,95 460,68" fill="none" stroke="#9fb4c9" stroke-width="2.25" stroke-linecap="round" stroke-dasharray="1 8" />
+
+          <!-- completed data points -->
+          <g fill="#9fb4c9">
+            <circle cx="60" cy="240" r="4" />
+            <circle cx="160" cy="245" r="4" />
+            <circle cx="260" cy="205" r="4" />
+            <circle cx="370" cy="155" r="4" />
+            <circle cx="420" cy="95" r="4" />
+          </g>
+
+          <!-- in-progress point -->
+          <circle class="lab-pulse" cx="460" cy="68" r="7" fill="none" stroke="#9fb4c9" stroke-width="1.75" />
+          <circle cx="460" cy="68" r="2" fill="#9fb4c9" />
+          <text x="460" y="48" text-anchor="middle" font-family="ui-monospace, monospace" font-size="10" letter-spacing="0.04em" fill="#6a6555">in progress</text>
+        </svg>
+      </div>
+
+      <p style="font-size: 14.5px; line-height: 1.65; color: #8a8472; max-width: 440px; margin: 40px auto 0;">A future advisory venture turning the ideas from The Strategy Lens into practice — built the same way: quietly, one step at a time.</p>
+
+      <a class="lens-cta-primary" href="index.html" style="display: inline-block; margin-top: 30px; background: #1a3a5c; color: #f5f1e7; font-size: 13px; font-weight: 600; letter-spacing: 0.03em; padding: 13px 28px; border-radius: 2px; transition: background .2s ease;">Explore The Strategy Lens</a>
+    </div>
+  </section>
+
+  <footer style="background: #1c1b17; color: #c5bfb0; border-top: 1px solid #36342c;">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 44px 32px; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap;">
+      <a href="index.html" style="font-family: 'Newsreader', serif; font-size: 22px; color: #f5f1e7; font-weight: 500;">The Strategy Lens</a>
+      <div style="display: flex; gap: 26px; font-size: 14px; flex-wrap: wrap;">
+        <a href="index.html" style="color: #c5bfb0;">Home</a>
+        <a href="about.html" style="color: #c5bfb0;">About</a>
+        <a href="topics.html" style="color: #c5bfb0;">Topics</a>
+        <a href="index.html#contact" style="color: #c5bfb0;">Contact</a>
+      </div>
+      <span style="font-size: 12.5px; color: #6a6555;">© 2026 The Strategy Lens</span>
+    </div>
+  </footer>
+
+</body>
+</html>

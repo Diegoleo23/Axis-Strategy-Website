@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The Strategy Lens — A Publication of Ideas</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Exploring how people, teams and organisations think, perform, adapt and grow, one essay at a time. By James Chikaonda.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500;1,6..72,600&family=Libre+Franklin:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  ::selection { background: #1a3a5c; color: #f5f1e7; }
+  a { text-decoration: none; color: inherit; }
+  body { background: #f5f1e7; color: #1c1b17; font-family: 'Libre Franklin', system-ui, sans-serif; min-height: 100vh; -webkit-font-smoothing: antialiased; }
+
+  .lens-nav-link { position: relative; }
+  .lens-nav-link::after { content: ""; position: absolute; left: 0; right: 100%; bottom: -4px; height: 1px; background: #1a3a5c; transition: right .28s ease; }
+  .lens-nav-link:hover::after { right: 0; }
+  .lens-topic:hover { background: #fbfaf4; }
+  .lens-topic:hover .lens-topic-arrow { transform: translateX(4px); opacity: 1; }
+  .lens-art:hover .lens-art-h { color: #1a3a5c; }
+  .lens-cta-primary:hover { background: #285484; }
+  .lens-cta-ghost:hover { border-color: #1c1b17; }
+  .lens-read:hover { color: #1a3a5c; }
+  .lens-read:hover .lens-read-arrow { transform: translateX(4px); }
+</style>
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <header style="position: sticky; top: 0; z-index: 50; background: rgba(245,241,231,0.86); backdrop-filter: saturate(140%) blur(10px); border-bottom: 1px solid #ddd5c3;">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 0 32px; height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 24px;">
+      <a href="index.html" style="display: flex; align-items: baseline; gap: 10px;">
+        <span style="font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 21px; letter-spacing: -0.01em; white-space: nowrap;">The Strategy Lens</span>
+      </a>
+      <nav style="display: flex; align-items: center; gap: 30px;">
+        <a class="lens-nav-link" href="index.html" style="font-size: 13px; font-weight: 500; letter-spacing: 0.01em;">Home</a>
+        <a class="lens-nav-link" href="topics.html" style="font-size: 13px; font-weight: 500;">Topics</a>
+        <a class="lens-nav-link" href="about.html" style="font-size: 13px; font-weight: 500;">About</a>
+      </nav>
+      <a class="lens-cta-primary" href="#newsletter" style="background: #1a3a5c; color: #f5f1e7; font-size: 12px; font-weight: 600; letter-spacing: 0.04em; padding: 9px 16px; border-radius: 2px; transition: background .2s ease;">Subscribe</a>
+    </div>
+  </header>
+
+  <!-- ============ HERO / COVER ============ -->
+  <section style="border-bottom: 1px solid #ddd5c3;">
+    <div style="max-width: 980px; margin: 0 auto; padding: 72px 32px 64px; text-align: center;">
+      <div style="font-size: 11.5px; font-weight: 600; letter-spacing: 0.24em; text-transform: uppercase; color: #8d846c;">A Publication of Ideas</div>
+      <h1 style="font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: clamp(54px, 8.6vw, 120px); line-height: 0.94; letter-spacing: -0.022em; margin: 26px 0 0;">The Strategy Lens</h1>
+      <p style="font-family: 'Newsreader', Georgia, serif; font-style: italic; font-size: clamp(19px, 2.1vw, 25px); color: #45413a; max-width: 720px; margin: 24px auto 0; line-height: 1.5;">Exploring how people, teams and organisations think, perform, adapt and grow, one essay at a time.</p>
+      <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #8d846c; margin-top: 22px;">By James Chikaonda</div>
+      <div style="display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 34px;">
+        <a class="lens-cta-primary" href="#articles" style="background: #1a3a5c; color: #f5f1e7; font-size: 13px; font-weight: 600; letter-spacing: 0.03em; padding: 13px 28px; border-radius: 2px; transition: background .2s ease;">Start Reading</a>
+        <a class="lens-cta-ghost" href="#newsletter" style="border: 1px solid #c3bba6; color: #1c1b17; font-size: 13px; font-weight: 600; letter-spacing: 0.03em; padding: 13px 28px; border-radius: 2px; transition: border-color .2s ease;">Subscribe to The Weekly Lens</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURED ESSAY (centrepiece) ============ -->
+  <section id="articles" style="max-width: 1180px; margin: 0 auto; padding: 80px 32px 0; scroll-margin-top: 80px;">
+    <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 40px;">
+      <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #1a3a5c;">No. 01</span>
+      <span style="flex: 1; height: 1px; background: #ddd5c3;"></span>
+      <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #6f6a5f;">The Featured Essay</span>
+    </div>
+
+    <a class="lens-art" href="article.html" style="display: grid; grid-template-columns: 1.06fr 1fr; gap: 56px; align-items: center;">
+      <div style="position: relative; width: 100%; aspect-ratio: 5/4; overflow: hidden; border: 1px solid #ddd5c3;">
+        <img src="images/thanos-hero.png" alt="The Infinity Gauntlet resting on a writer's desk, one stone lit" style="width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;">
+      </div>
+      <div>
+        <div style="display: flex; align-items: center; gap: 12px; font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #1a3a5c;"><span>Personal Growth</span><span style="width: 4px; height: 4px; border-radius: 50%; background: #c3bba6;"></span><span style="color: #6f6a5f;">3 min read</span></div>
+        <h3 class="lens-art-h" style="font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(30px, 3.6vw, 46px); line-height: 1.1; letter-spacing: -0.015em; margin: 16px 0 0; transition: color .2s ease;">The Thanos Complex: When You Realise You Have to Do It Yourself</h3>
+        <p style="font-size: 17px; line-height: 1.64; color: #45413a; margin: 18px 0 0; max-width: 520px;">The lesson, if there is one: do not delegate the vision. Delegate the execution once the vision is proven.</p>
+        <div style="display: flex; align-items: center; gap: 10px; margin-top: 22px; font-size: 13px; color: #6f6a5f;"><span style="font-weight: 600; color: #2a2823;">James Chikaonda</span><span>·</span><span>February 2026</span></div>
+        <span class="lens-read" style="display: inline-flex; align-items: center; gap: 8px; margin-top: 22px; font-size: 13px; font-weight: 600; letter-spacing: 0.04em; color: #1c1b17; border-bottom: 1px solid #1a3a5c; padding-bottom: 4px; transition: color .2s ease;">Read the essay <span class="lens-read-arrow" style="display: inline-block; transition: transform .2s ease; color: #1a3a5c;">→</span></span>
+      </div>
+    </a>
+  </section>
+
+  <!-- ============ TOPICS ============ -->
+  <section style="max-width: 1180px; margin: 0 auto; padding: 88px 32px 0;">
+    <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 34px;">
+      <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #1a3a5c;">No. 02</span>
+      <span style="flex: 1; height: 1px; background: #ddd5c3;"></span>
+      <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #6f6a5f;">Explore by Topic</span>
+    </div>
+
+    <div style="border-top: 1px solid #ddd5c3; border-left: 1px solid #ddd5c3; display: grid; grid-template-columns: repeat(3, 1fr);">
+      <a class="lens-topic" href="strategy.html" style="border-right: 1px solid #ddd5c3; border-bottom: 1px solid #ddd5c3; padding: 26px 26px 30px; display: block; transition: background .18s ease;">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;"><span style="font-size: 11px; font-weight: 600; letter-spacing: 0.16em; color: #b0a88f;">01</span><span class="lens-topic-arrow" style="opacity: 0; transition: all .2s ease; color: #1a3a5c;">→</span></div>
+        <div style="font-family: 'Newsreader', serif; font-size: 25px; font-weight: 500; margin-top: 22px;">Strategy</div>
+        <div style="font-size: 13.5px; color: #6f6a5f; line-height: 1.55; margin-top: 8px;">Decision-making, execution, planning, and long-term thinking.</div>
+      </a>
+      <a class="lens-topic" href="marketing.html" style="border-right: 1px solid #ddd5c3; border-bottom: 1px solid #ddd5c3; padding: 26px 26px 30px; display: block; transition: background .18s ease;">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;"><span style="font-size: 11px; font-weight: 600; letter-spacing: 0.16em; color: #b0a88f;">02</span><span class="lens-topic-arrow" style="opacity: 0; transition: all .2s ease; color: #1a3a5c;">→</span></div>
+        <div style="font-family: 'Newsreader', serif; font-size: 25px; font-weight: 500; margin-top: 22px;">Marketing</div>
+        <div style="font-size: 13.5px; color: #6f6a5f; line-height: 1.55; margin-top: 8px;">Brand building, positioning, communication, and customer understanding.</div>
+      </a>
+      <a class="lens-topic" href="leadership.html" style="border-right: 1px solid #ddd5c3; border-bottom: 1px solid #ddd5c3; padding: 26px 26px 30px; display: block; transition: background .18s ease;">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;"><span style="font-size: 11px; font-weight: 600; letter-spacing: 0.16em; color: #b0a88f;">03</span><span class="lens-topic-arrow" style="opacity: 0; transition: all .2s ease; color: #1a3a5c;">→</span></div>
+        <div style="font-family: 'Newsreader', serif; font-size: 25px; font-weight: 500; margin-top: 22px;">Leadership</div>
+        <div style="font-size: 13.5px; color: #6f6a5f; line-height: 1.55; margin-top: 8px;">Influence, accountability, culture, people, and execution.</div>
+      </a>
+      <a class="lens-topic" href="sports-performance.html" style="border-right: 1px solid #ddd5c3; border-bottom: 1px solid #ddd5c3; padding: 26px 26px 30px; display: block; transition: background .18s ease;">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;"><span style="font-size: 11px; font-weight: 600; letter-spacing: 0.16em; color: #b0a88f;">04</span><span style="font-size: 9.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #1a3a5c; border: 1px solid #c2cdd9; border-radius: 100px; padding: 3px 9px;">Signature</span></div>
+        <div style="font-family: 'Newsreader', serif; font-size: 25px; font-weight: 500; margin-top: 22px;">Sports &amp; Performance</div>
+        <div style="font-size: 13.5px; color: #6f6a5f; line-height: 1.55; margin-top: 8px;">Football, Formula 1, and elite sport as a lens on leadership, teamwork, pressure, and reinvention.</div>
+      </a>
+      <a class="lens-topic" href="project-management.html" style="border-right: 1px solid #ddd5c3; border-bottom: 1px solid #ddd5c3; padding: 26px 26px 30px; display: block; transition: background .18s ease;">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;"><span style="font-size: 11px; font-weight: 600; letter-spacing: 0.16em; color: #b0a88f;">05</span><span class="lens-topic-arrow" style="opacity: 0; transition: all .2s ease; color: #1a3a5c;">→</span></div>
+        <div style="font-family: 'Newsreader', serif; font-size: 25px; font-weight: 500; margin-top: 22px;">Project Management</div>
+        <div style="font-size: 13.5px; color: #6f6a5f; line-height: 1.55; margin-top: 8px;">Delivery, stakeholders, execution, and lessons learned.</div>
+      </a>
+      <a class="lens-topic" href="customer-experience.html" style="border-right: 1px solid #ddd5c3; border-bottom: 1px solid #ddd5c3; padding: 26px 26px 30px; display: block; transition: background .18s ease;">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;"><span style="font-size: 11px; font-weight: 600; letter-spacing: 0.16em; color: #b0a88f;">06</span><span class="lens-topic-arrow" style="opacity: 0; transition: all .2s ease; color: #1a3a5c;">→</span></div>
+        <div style="font-family: 'Newsreader', serif; font-size: 25px; font-weight: 500; margin-top: 22px;">Customer Experience</div>
+        <div style="font-size: 13.5px; color: #6f6a5f; line-height: 1.55; margin-top: 8px;">Service, loyalty, complaints, and experience design.</div>
+      </a>
+      <a class="lens-topic" href="ai-technology.html" style="border-right: 1px solid #ddd5c3; border-bottom: 1px solid #ddd5c3; padding: 26px 26px 30px; display: block; transition: background .18s ease;">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;"><span style="font-size: 11px; font-weight: 600; letter-spacing: 0.16em; color: #b0a88f;">07</span><span class="lens-topic-arrow" style="opacity: 0; transition: all .2s ease; color: #1a3a5c;">→</span></div>
+        <div style="font-family: 'Newsreader', serif; font-size: 25px; font-weight: 500; margin-top: 22px;">AI &amp; Technology</div>
+        <div style="font-size: 13.5px; color: #6f6a5f; line-height: 1.55; margin-top: 8px;">Artificial intelligence, transformation, productivity, and what's next.</div>
+      </a>
+      <a class="lens-topic" href="personal-growth.html" style="border-right: 1px solid #ddd5c3; border-bottom: 1px solid #ddd5c3; padding: 26px 26px 30px; display: block; transition: background .18s ease;">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;"><span style="font-size: 11px; font-weight: 600; letter-spacing: 0.16em; color: #b0a88f;">08</span><span class="lens-topic-arrow" style="opacity: 0; transition: all .2s ease; color: #1a3a5c;">→</span></div>
+        <div style="font-family: 'Newsreader', serif; font-size: 25px; font-weight: 500; margin-top: 22px;">Personal Growth</div>
+        <div style="font-size: 13.5px; color: #6f6a5f; line-height: 1.55; margin-top: 8px;">Resilience, habits, mindset, reflection, and learning.</div>
+      </a>
+      <a class="lens-topic" href="human-behaviour.html" style="border-right: 1px solid #ddd5c3; border-bottom: 1px solid #ddd5c3; padding: 26px 26px 30px; display: block; transition: background .18s ease;">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;"><span style="font-size: 11px; font-weight: 600; letter-spacing: 0.16em; color: #b0a88f;">09</span><span class="lens-topic-arrow" style="opacity: 0; transition: all .2s ease; color: #1a3a5c;">→</span></div>
+        <div style="font-family: 'Newsreader', serif; font-size: 25px; font-weight: 500; margin-top: 22px;">Human Behaviour</div>
+        <div style="font-size: 13.5px; color: #6f6a5f; line-height: 1.55; margin-top: 8px;">Communication, conflict, decision-making, and why people and teams act as they do.</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ LATEST ARTICLES ============ -->
+  <section style="max-width: 1180px; margin: 0 auto; padding: 88px 32px 0;">
+    <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 36px;">
+      <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #1a3a5c;">No. 03</span>
+      <span style="flex: 1; height: 1px; background: #ddd5c3;"></span>
+      <span style="font-size: 12px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #6f6a5f;">Latest Articles</span>
+    </div>
+
+    <p style="text-align: center; font-family: 'Newsreader', serif; font-style: italic; font-size: 18px; color: #8d846c; margin: 40px 0 0; padding-top: 36px; border-top: 1px solid #ddd5c3;">New essays are being written — the archive will grow here as each one is finished.</p>
+
+    <div style="margin-top: 48px; text-align: center;">
+      <a class="lens-read" href="topics.html" style="display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; letter-spacing: 0.04em; color: #1c1b17; border-bottom: 1px solid #1a3a5c; padding-bottom: 4px; transition: color .2s ease;">Browse the full archive <span class="lens-read-arrow" style="display: inline-block; transition: transform .2s ease; color: #1a3a5c;">→</span></a>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT JAMES ============ -->
+  <section style="border-top: 1px solid #ddd5c3; margin-top: 96px; background: #efe9da;">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 84px 32px; display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 64px; align-items: center;">
+      <div style="position: relative; aspect-ratio: 4/5; background: repeating-linear-gradient(135deg, #e2dac8, #e2dac8 12px, #ebe4d3 12px, #ebe4d3 24px); border: 1px solid #d3cab4;">
+        <div style="position: absolute; bottom: 14px; left: 14px; font-family: ui-monospace, monospace; font-size: 11px; color: #8d846c; background: rgba(239,233,218,0.9); padding: 5px 9px;">[ portrait of James ]</div>
+      </div>
+      <div>
+        <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #1a3a5c; margin-bottom: 22px;">No. 04 — About the Author</div>
+        <h2 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(28px, 3.6vw, 42px); line-height: 1.16; letter-spacing: -0.01em; margin: 0;">I write to understand what experience has been trying to teach me.</h2>
+        <p style="font-size: 16.5px; line-height: 1.68; color: #45413a; margin: 24px 0 0; max-width: 600px;">I'm James Chikaonda. Across strategy, marketing, leadership, and the projects that don't go to plan, I've collected more lessons than I could ever keep to myself. <span style="font-style: italic; font-family: 'Newsreader', serif;">The Strategy Lens</span> is where I write them down — honestly, without ego, and in the hope they're useful to someone else.</p>
+        <p style="font-family: 'Newsreader', serif; font-style: italic; font-size: 19px; line-height: 1.5; color: #1a3a5c; margin: 20px 0 0; max-width: 600px;">Share lessons, not confidential information. Share ideas, not ego. Build quietly. Learn continuously.</p>
+        <a class="lens-read" href="about.html" style="display: inline-flex; align-items: center; gap: 8px; margin-top: 28px; font-size: 13px; font-weight: 600; letter-spacing: 0.04em; color: #1c1b17; border-bottom: 1px solid #1a3a5c; padding-bottom: 4px; transition: color .2s ease;">Read the full story <span class="lens-read-arrow" style="display: inline-block; transition: transform .2s ease; color: #1a3a5c;">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NEWSLETTER ============ -->
+  <section id="newsletter" style="border-top: 1px solid #d3cab4; scroll-margin-top: 70px;">
+    <div style="max-width: 720px; margin: 0 auto; padding: 92px 32px; text-align: center;">
+      <div style="font-size: 12px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: #1a3a5c; margin-bottom: 18px;">No. 05 — The Newsletter</div>
+      <h2 style="font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(36px, 5vw, 56px); line-height: 1.04; letter-spacing: -0.015em; margin: 0;">The Weekly Lens</h2>
+      <p style="font-size: 16.5px; line-height: 1.6; color: #45413a; max-width: 500px; margin: 18px auto 0;">New articles, reflections, and practical insights — delivered to your inbox once a week. No noise, no selling. Just ideas worth thinking about.</p>
+      <form id="lens-subscribe-form" style="display: flex; gap: 10px; max-width: 460px; margin: 32px auto 0; flex-wrap: wrap; justify-content: center;">
+        <input type="email" placeholder="your@email.com" required style="flex: 1; min-width: 220px; background: #fbfaf4; border: 1px solid #c3bba6; border-radius: 2px; padding: 14px 16px; font-size: 15px; font-family: inherit; color: #1c1b17; outline: none;" />
+        <button class="lens-cta-primary" id="lens-subscribe-btn" type="submit" style="background: #1a3a5c; color: #f5f1e7; border: none; font-size: 13px; font-weight: 600; letter-spacing: 0.03em; padding: 14px 26px; border-radius: 2px; cursor: pointer; transition: background .2s ease; font-family: inherit;">Subscribe</button>
+      </form>
+      <p style="font-size: 12.5px; color: #8d846c; margin-top: 16px;">Join readers who came for an article and stayed for the ideas.</p>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer style="background: #1c1b17; color: #c5bfb0; border-top: 1px solid #ddd5c3;">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 56px 32px 40px;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; flex-wrap: wrap; border-bottom: 1px solid #36342c; padding-bottom: 36px;">
+        <div style="max-width: 380px;">
+          <div style="font-family: 'Newsreader', serif; font-size: 24px; color: #f5f1e7; font-weight: 500;">The Strategy Lens</div>
+          <p style="font-size: 14px; line-height: 1.6; color: #8a8472; margin: 14px 0 0;">A publication of ideas on how we think, lead, grow, and perform. Founded and written by James Chikaonda.</p>
+          <a href="mailto:james@thestrategylens.com" style="display: inline-block; font-size: 14px; color: #c5bfb0; margin-top: 16px; border-bottom: 1px solid #4a473e; padding-bottom: 2px;">james@thestrategylens.com</a>
+        </div>
+        <div style="display: flex; gap: 64px; flex-wrap: wrap;">
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #6a6555;">Read</span>
+            <a href="topics.html#archive" style="font-size: 14px; color: #c5bfb0;">Articles</a>
+            <a href="topics.html" style="font-size: 14px; color: #c5bfb0;">Topics</a>
+            <a href="#newsletter" style="font-size: 14px; color: #c5bfb0;">The Weekly Lens</a>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: #6a6555;">More</span>
+            <a href="about.html" style="font-size: 14px; color: #c5bfb0;">About James</a>
+            <a href="axis-strategy-lab.html" style="font-size: 14px; color: #c5bfb0;">Axis Strategy Lab</a>
+            <a href="mailto:james@thestrategylens.com" style="font-size: 14px; color: #c5bfb0;">Contact</a>
+          </div>
+        </div>
+      </div>
+      <div style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding-top: 24px; flex-wrap: wrap; font-size: 12.5px; color: #6a6555;">
+        <span>© 2026 The Strategy Lens. All rights reserved.</span>
+        <span>Built quietly. Learning continuously.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var form = document.getElementById('lens-subscribe-form');
+      var btn = document.getElementById('lens-subscribe-btn');
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        btn.textContent = 'Subscribed ✓';
+      });
+    })();
+  </script>
+
+</body>
+</html>

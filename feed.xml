@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>The Strategy Lens</title>
+  <link>https://axisstrategylabs.com/</link>
+  <description>Exploring how people, teams and organisations think, perform, adapt and grow, one essay at a time. By James Chikaonda.</description>
+  <language>en-us</language>
+  <atom:link href="https://axisstrategylabs.com/feed.xml" rel="self" type="application/rss+xml" />
+  <lastBuildDate>Tue, 04 Aug 2026 00:00:00 GMT</lastBuildDate>
+
+  <item>
+    <title>Leadership Is What You Leave Behind in People</title>
+    <link>https://axisstrategylabs.com/leadership-what-you-leave-behind.html</link>
+    <guid isPermaLink="true">https://axisstrategylabs.com/leadership-what-you-leave-behind.html</guid>
+    <pubDate>Mon, 03 Aug 2026 00:00:00 GMT</pubDate>
+    <description><![CDATA[Leadership is not in the title, it's in the character. On oneness, mentoring, knowing your craft, having someone's back, and the mark you leave behind.]]></description>
+    <enclosure url="https://axisstrategylabs.com/images/leadership-hero.png" length="2107257" type="image/png" />
+  </item>
+
+  <item>
+    <title>The Thanos Complex: When You Realise You Have to Do It Yourself</title>
+    <link>https://axisstrategylabs.com/article.html</link>
+    <guid isPermaLink="true">https://axisstrategylabs.com/article.html</guid>
+    <pubDate>Sat, 07 Feb 2026 00:00:00 GMT</pubDate>
+    <description><![CDATA[The lesson, if there is one: do not delegate the vision. Delegate the execution once the vision is proven.]]></description>
+    <enclosure url="https://axisstrategylabs.com/images/thanos-hero.png" length="2334160" type="image/png" />
+  </item>
+
+</channel>
+</rss>

@@ -1,1 +1,8 @@
 AddType application/rss+xml .xml
+
+<Files "feed.xml">
+  SetEnv no-gzip 1
+  <IfModule mod_headers.c>
+    Header set Connection close
+  </IfModule>
+</Files>

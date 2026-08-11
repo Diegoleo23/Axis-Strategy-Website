@@ -4,20 +4,23 @@
 // no native RSS-driven automation, so this replaces that feature by
 // calling the regular Campaigns API directly.
 
-import { readFileSync, writeFileSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 
 const LIST_ID = '0c6f1c1fb8';
 const FEED_PATH = 'feed.xml';
 const STATE_PATH = '.mailchimp-sent.json';
 const TEMPLATE_PATH = 'email-templates/new-article-rss-automation.html';
+const DRY_RUN_DIR = 'dry-run-output';
 
-const apiKey = requireEnv('MAILCHIMP_API_KEY');
-const fromEmail = requireEnv('MAILCHIMP_FROM_EMAIL');
+const DRY_RUN = process.env.DRY_RUN === 'true';
+
+const apiKey = DRY_RUN ? null : requireEnv('MAILCHIMP_API_KEY');
+const fromEmail = DRY_RUN ? null : requireEnv('MAILCHIMP_FROM_EMAIL');
 const fromName = process.env.MAILCHIMP_FROM_NAME || 'The Strategy Lens';
 
-const dc = apiKey.split('-').pop();
-const apiBase = `https://${dc}.api.mailchimp.com/3.0`;
-const authHeader = 'Basic ' + Buffer.from('anystring:' + apiKey).toString('base64');
+const dc = apiKey ? apiKey.split('-').pop() : null;
+const apiBase = dc ? `https://${dc}.api.mailchimp.com/3.0` : null;
+const authHeader = apiKey ? 'Basic ' + Buffer.from('anystring:' + apiKey).toString('base64') : null;
 
 function requireEnv(name) {
   const value = process.env[name];
@@ -88,6 +91,20 @@ async function mailchimp(path, options = {}) {
 }
 
 async function sendCampaignForItem(item, template) {
+  const subject = `New essay: ${item.title}`;
+  const html = renderCampaignHtml(template, item);
+
+  if (DRY_RUN) {
+    mkdirSync(DRY_RUN_DIR, { recursive: true });
+    const outPath = `${DRY_RUN_DIR}/${item.guid.replace(/[^a-z0-9]+/gi, '-')}.html`;
+    writeFileSync(outPath, html);
+    console.log(`[DRY RUN] Would send campaign for: ${item.title}`);
+    console.log(`[DRY RUN]   subject: ${subject}`);
+    console.log(`[DRY RUN]   rendered HTML written to ${outPath} (open it in a browser to preview)`);
+    console.log('[DRY RUN]   no Mailchimp API calls made, no subscribers emailed.');
+    return;
+  }
+
   console.log(`Creating campaign for: ${item.title}`);
 
   const campaign = await mailchimp('/campaigns', {
@@ -96,7 +113,7 @@ async function sendCampaignForItem(item, template) {
       type: 'regular',
       recipients: { list_id: LIST_ID },
       settings: {
-        subject_line: `New essay: ${item.title}`,
+        subject_line: subject,
         preview_text: item.description.slice(0, 120),
         title: `Auto RSS - ${item.title} - ${item.guid}`,
         from_name: fromName,
@@ -107,7 +124,7 @@ async function sendCampaignForItem(item, template) {
 
   await mailchimp(`/campaigns/${campaign.id}/content`, {
     method: 'PUT',
-    body: JSON.stringify({ html: renderCampaignHtml(template, item) }),
+    body: JSON.stringify({ html }),
   });
 
   await mailchimp(`/campaigns/${campaign.id}/actions/send`, { method: 'POST' });
@@ -136,8 +153,10 @@ async function main() {
 
   for (const item of unsent) {
     await sendCampaignForItem(item, template);
-    sentGuids.add(item.guid);
-    writeFileSync(STATE_PATH, JSON.stringify({ sentGuids: [...sentGuids] }, null, 2) + '\n');
+    if (!DRY_RUN) {
+      sentGuids.add(item.guid);
+      writeFileSync(STATE_PATH, JSON.stringify({ sentGuids: [...sentGuids] }, null, 2) + '\n');
+    }
   }
 }
 

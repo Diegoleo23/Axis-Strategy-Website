@@ -4,7 +4,12 @@ on:
   push:
     branches: [main]
     paths: [feed.xml]
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run (no emails sent, no Mailchimp calls made)"
+        type: boolean
+        default: true
 
 permissions:
   contents: write
@@ -21,12 +26,22 @@ jobs:
 
       - name: Send campaigns for new feed items
         env:
+          DRY_RUN: ${{ github.event.inputs.dry_run || 'false' }}
           MAILCHIMP_API_KEY: ${{ secrets.MAILCHIMP_API_KEY }}
           MAILCHIMP_FROM_EMAIL: ${{ secrets.MAILCHIMP_FROM_EMAIL }}
           MAILCHIMP_FROM_NAME: ${{ vars.MAILCHIMP_FROM_NAME }}
         run: node scripts/send-rss-campaign.mjs
 
+      - name: Upload dry-run preview
+        if: ${{ github.event.inputs.dry_run == 'true' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: dry-run-output
+          path: dry-run-output/
+          if-no-files-found: ignore
+
       - name: Commit updated sent-state
+        if: ${{ github.event.inputs.dry_run != 'true' }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"

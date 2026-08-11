@@ -1,0 +1,35 @@
+name: Send RSS campaign
+
+on:
+  push:
+    branches: [main]
+    paths: [feed.xml]
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Send campaigns for new feed items
+        env:
+          MAILCHIMP_API_KEY: ${{ secrets.MAILCHIMP_API_KEY }}
+          MAILCHIMP_FROM_EMAIL: ${{ secrets.MAILCHIMP_FROM_EMAIL }}
+          MAILCHIMP_FROM_NAME: ${{ vars.MAILCHIMP_FROM_NAME }}
+        run: node scripts/send-rss-campaign.mjs
+
+      - name: Commit updated sent-state
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .mailchimp-sent.json
+          git diff --cached --quiet || git commit -m "Record sent RSS campaign(s) [skip ci]"
+          git push
